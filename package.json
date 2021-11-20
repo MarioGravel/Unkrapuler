@@ -1,0 +1,26 @@
+{
+  "name": "unkrapuler",
+  "version": "1.0.0",
+  "description": "Romeove the krap from your MP3's file names\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D3\u001b[3~\u001b[C\u001b[C\u001b[D\u001b[C\u001b[C\u001b[C\u001b[C\u001b[D\u001b[\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[Cfile names",
+  "main": "index.js",
+  "scripts": {
+    "start": "node dist/index.js",
+    "dev": "run-p build:watch start:watch",
+    "build:watch": "tsc --watch",
+    "start:watch": "nodemon build/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "MP3",
+    "rename"
+  ],
+  "author": "Mario Gravel",
+  "license": "ISC",
+  "devDependencies": {
+    "@tsconfig/node16": "^1.0.2",
+    "@types/node": "^16.11.9",
+    "nodemon": "^2.0.15",
+    "npm-run-all": "^4.1.5",
+    "typescript": "^4.5.2"
+  }
+}

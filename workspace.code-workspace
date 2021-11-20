@@ -1,0 +1,21 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"editor.tabSize": 2,
+		"javascript.inlayHints.enumMemberValues.enabled": true,
+		"javascript.preferences.quoteStyle": "double",
+		"javascript.suggest.completeFunctionCalls": true,
+		"typescript.format.semicolons": "remove",
+		"typescript.locale": "en",
+		"typescript.suggest.completeFunctionCalls": true,
+		"editor.formatOnSave": true,
+		"editor.formatOnPaste": true,
+		"prettier.requireConfig": true,
+		"prettier.printWidth": 160,
+		"prettier.semi": false
+	}
+}
