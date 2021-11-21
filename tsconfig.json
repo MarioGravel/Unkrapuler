@@ -1,18 +1,13 @@
 {
   "extends": "@tsconfig/node16/tsconfig.json",
   "compilerOptions": {
-    "preserveConstEnums": true,
+    "target": "es5",
+    "module": "commonjs",
     "outDir": "build",
+    "sourceMap": true,
+    "sourceRoot": "./src/",
+    "noEmit": false
   },
-  "files": [
-    "src/index.ts"
-  ],
-  "include": [
-    "src/**/*"
-  ],
-  "exclude": [
-    "node_modules",
-    "**/*.spec.ts"
-  ]
-
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "**/*.spec.ts", ".next"]
 }

@@ -4,7 +4,7 @@
   "description": "Romeove the krap from your MP3's file names\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D3\u001b[3~\u001b[C\u001b[C\u001b[D\u001b[C\u001b[C\u001b[C\u001b[C\u001b[D\u001b[\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[Cfile names",
   "main": "index.js",
   "scripts": {
-    "start": "node dist/index.js",
+    "start": "node build/index.js",
     "dev": "run-p build:watch start:watch",
     "build:watch": "tsc --watch",
     "start:watch": "nodemon build/index.js",
