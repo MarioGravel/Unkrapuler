@@ -92,8 +92,10 @@ for (var _i = 0, fileEntries_1 = fileEntries; _i < fileEntries_1.length; _i++) {
             console.log(fileEntry);
         }
     }
-    else {
-        //console.log(fileEntry)
+    else if (newPath === BASE_PATH) {
+        console.log(fileEntry.absPath);
+        console.log(newPath + "\n\n");
+        console.log(fileEntry);
     }
 }
 //# sourceMappingURL=index.js.map

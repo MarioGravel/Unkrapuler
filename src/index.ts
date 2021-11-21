@@ -112,7 +112,9 @@ for (let fileEntry of fileEntries) {
     } else {
       console.log(fileEntry)
     }
-  } else {
-    //console.log(fileEntry)
+  } else if (newPath === BASE_PATH) {
+    console.log(fileEntry.absPath)
+    console.log(newPath + "\n\n")
+    console.log(fileEntry)
   }
 }

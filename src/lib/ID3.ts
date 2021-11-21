@@ -23,7 +23,12 @@ const getSize = (buffer: Buffer) => {
   if (buff[0] > 0x80 || buff[1] > 0x80 || buff[2] > 0x80 || buff[3] > 0x80) {
     return 0
   }
-  return (buff[0] << 21) | (buff[1] << 14) | (buff[2] << 7) | buff[3]
+  return (
+    ((buff[0] & 0x7f) << 24) |
+    ((buff[1] & 0x7f) << 16) |
+    ((buff[2] & 0x7f) << 8) |
+    (buff[3] & 0x7f)
+  )
 }
 
 const getID3Id = (buffer: Buffer) => decode(buffer)
@@ -44,6 +49,9 @@ const parseID3V1 = (buffer: Buffer): ID3 => {
       .readUInt8()
       .toString()
       .padStart(2, "0")
+  }
+  if (result.track === "32") {
+    result.track = undefined
   }
   return result
 }
@@ -129,8 +137,8 @@ export const extractID3 = (file: FileEntry) => {
         case "":
         case "APIC": // Album Picture
         case "COMM":
-        case "PRIV":
         case "TXXX":
+        case "PRIV":
           break
         default: {
           //console.log(`${tag.id} : ${tag.content}`)
