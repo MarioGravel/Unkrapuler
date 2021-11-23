@@ -92,7 +92,7 @@ export const extractID3 = (file: FileEntry) => {
   const buffer = fs.readFileSync(file.absPath)
   const result = parseID3V1(buffer.slice(-128))
   const header = extractID3Header(buffer) as ID3V2_Header
-  if (header.flags.footer_present) {
+  if (header.flags?.footer_present) {
     console.warn("There might be some info in footer tags for " + file.absPath)
     console.log(extractID3Footer(buffer))
   }
