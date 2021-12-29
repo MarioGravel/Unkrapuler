@@ -1,0 +1,31 @@
+Eric Kemp's original description retrieved from http://www.ne.jp/asahi/techno/ostra/id3doc/ID3.html
+
+MP3 ID3 Tag Protocal Definition
+
+Note: I do not 'own' nor want to own this tag format, its something I created
+for myself that other people attached to. In this regard, this information is
+for free of use for other playlist makers who want real info with their songs
+and a standard specification. In other words you do not have to ask me permission
+to use this information. I beleive in freedom of information, in this way it promotes
+growth of other quality playlist makers and continues to 'up' the anty for what a
+playlist maker should have with every release from other great playlist makers.
+(Just remember ID3 was the first! =), even though it did suck! )
+
+MP3 ID3 Tag 1.0 -- 128 bytes
+(c) 1996, 1997 NamkraD (Eric Kemp)
+Seek end of file, then -128, if first 3 bytes='TAG' then it has info layed
+out as follows...
+
+0..2 == 'TAG' (3 Bytes)
+3..32 == Song Name (30 bytes)
+33..62 == Artist (30 Bytes)
+63..92 == Album Name (30 Bytes)
+93..96 == Year (4 Bytes)
+97..126 == Comment (30 Bytes)
+127 == 1 Byte Song Genre Identifier
+(get the listing of song Genre Types to know what byte = what)
+
+
+New Genres will be added when Studio 3 v1.1 is released!
+
+Please send mail, comments and suggestions to NamkraD/Eric Kemp . This site is best viewed using Netscape Navigator 3.x+
